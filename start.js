@@ -1,3 +1,9 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
+
+
 app.get('/getCalendar/:site', function(req, res) {
     console.log("getEslCalender");
     res.header("Access-Control-Allow-Origin", "*");
@@ -34,3 +40,5 @@ function getUserName(email) {
     }
     return clandlyUrl;
 }
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
